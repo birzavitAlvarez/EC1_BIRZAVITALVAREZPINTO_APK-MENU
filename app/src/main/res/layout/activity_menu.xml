@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8bd3f8"
+    tools:context=".Menu">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="-1dp"
+            android:src="@drawable/ic_tit" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="77dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="23dp"
+                android:src="@drawable/dni" />
+
+            <TextView
+                android:id="@+id/tvDni"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="4"
+                android:padding="5dp"
+                android:textColor="@color/hotpink"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:background="@drawable/edt_border"
+                tools:ignore="Autofill,LabelFor,TextFields" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="102dp"
+                android:layout_height="41dp"
+                android:src="@drawable/nombre" />
+
+            <EditText
+                android:id="@+id/edtNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:textSize="18sp"
+                android:layout_weight="4"
+                android:textAlignment="center"
+                android:maxLength="40"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:textColor="@color/hotpink"
+                android:background="@drawable/edt_border"
+                tools:ignore="Autofill,LabelFor,TextFields" />
+
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spnPlatos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/platos"
+            android:textAlignment="center"
+            android:layout_marginTop="5dp"
+            android:padding="8dp"
+            android:fontFamily="@font/paytone_one"
+            android:background="@drawable/table"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="102dp"
+                android:layout_height="41dp"
+                android:src="@drawable/cantidad"/>
+
+            <EditText
+                android:id="@+id/edtCantidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:textSize="18sp"
+                android:layout_weight="4"
+                android:textAlignment="center"
+                android:maxLength="40"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:inputType="number"
+                android:textColor="@color/hotpink"
+                android:background="@drawable/edt_border"
+                tools:ignore="Autofill,LabelFor,TextFields" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:src="@drawable/medio" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbtEfectivo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/paytone_one"
+                android:textColor="#C33F15"
+                android:theme="@style/Theme.MaterialComponents.DayNight"
+                android:text="Efectivo" />
+
+            <RadioButton
+                android:id="@+id/rbtTarjeta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:theme="@style/Theme.MaterialComponents.DayNight"
+                android:text="Tarjeta"
+                android:fontFamily="@font/paytone_one"
+                android:textColor="#C33F15" />
+        </RadioGroup>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:src="@drawable/adicionales" />
+
+        <CheckBox
+            android:id="@+id/chkDelivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/paytone_one"
+            android:textColor="#23B113"
+            android:theme="@style/Theme.MaterialComponents.DayNight"
+            android:text="Delivery" />
+
+        <CheckBox
+            android:id="@+id/chkBolsas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/paytone_one"
+            android:textColor="#23B113"
+            android:theme="@style/Theme.MaterialComponents.DayNight"
+            android:text="Bolsas" />
+
+        <Button
+            android:id="@+id/btnCalcular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:backgroundTint="#E459ED"
+            android:text="CALCULAR"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/montos" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:textAlignment="center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:fontFamily="@font/paytone_one"
+                android:text="Menú"
+                android:background="@drawable/table"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:fontFamily="@font/paytone_one"
+                android:text="Bolsas"
+                android:textAlignment="center"
+                android:background="@drawable/table"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:fontFamily="@font/paytone_one"
+                android:text="Delivery"
+                android:background="@drawable/table"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:fontFamily="@font/paytone_one"
+                android:text="T. Adicional"
+                android:background="@drawable/table"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:textAlignment="center">
+
+            <TextView
+                android:id="@+id/tvMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:background="@drawable/table"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvBolsas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:background="@drawable/table"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvDelivery"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:background="@drawable/table"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvAdicional"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:background="@drawable/table"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="TOTAL:"
+                android:textAlignment="textEnd"
+                android:fontFamily="@font/paytone_one"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnImprimir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:backgroundTint="#E459ED"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:text="IMPRIMIR" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

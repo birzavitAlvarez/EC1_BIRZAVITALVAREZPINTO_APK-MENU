@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">EC1_BIRZAVITALVAREZPINTO</string>
+
+    <string-array name="platos">
+        <item>Platos</item>
+        <item>LOMO SALTADO</item>
+        <item>AJI DE GALLINA</item>
+        <item>SECO CON FREJOLES</item>
+        <item>CEVICHE MIXTO</item>
+    </string-array>
+
+</resources>

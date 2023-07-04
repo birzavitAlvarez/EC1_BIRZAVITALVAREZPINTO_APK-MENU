@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/autour_one</item>
+        <item>@font/diplomata</item>
+        <item>@font/goblin_one</item>
+        <item>@font/monoton</item>
+        <item>@font/paytone_one</item>
+    </array>
+</resources>
